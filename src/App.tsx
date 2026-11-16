@@ -283,7 +283,7 @@ function Stage() {
         ))}
         {!s.hasFrame && (
           <div className="blank">
-            {s.mirror === 'requesting' ? (
+            {s.mirror === 'requesting' || (s.mirror === 'live' && !s.hasFrame) ? (
               <>
                 <span className="spinner" />
                 <b>{s.mode === 'projection' ? 'スマホで「今すぐ開始」を押してください' : '画面を取得しています…'}</b>
